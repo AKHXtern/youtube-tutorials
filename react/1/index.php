@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <title>React.js Tutorial</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
         <script src="vendor/lib/codemirror.js" type="text/javascript" charset="utf-8"></script>
         <script src="vendor/addon/selection/active-line.js" type="text/javascript" charset="utf-8"></script>
@@ -14,12 +15,8 @@
         <script src="vendor/mode/javascript/javascript.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
-        <h2>React.js MTFKRS</h2>
         <div id="editor">
         </div>
-
-
-
         <script>
             $(document).ready(function(){
                 var codemirror = CodeMirror($('#editor').get(0), {
@@ -42,7 +39,6 @@
                     });
 
                     document.getElementById('result').contentWindow.location.reload();
-
                 });
             });
         </script>
@@ -51,6 +47,6 @@
             <?php echo file_get_contents('content.txt'); ?>
         </script>
 
-        <iframe src="result.php" id="result" width="100%"></iframe>
+        <iframe src="result.php" id="result" width="100%" height="400px"></iframe>
     </body>
 </html>
