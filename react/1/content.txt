@@ -1,0 +1,56 @@
+
+            function Header () {
+    return (
+        <Menu/>
+    )
+}
+
+function MenuItem ({label}) {
+    return (
+        <li>{label}</li>
+    )
+}
+
+function Menu () {
+
+    let items = [
+        'home',
+        'about',
+        'portfolio',
+        'contact'
+    ];
+    let rows = [];
+
+    for (var i = 0; i < items.length; i++) {
+        rows.push(<MenuItem label={items[i]} />);
+    }
+    return <ul>{rows}</ul>;
+}
+
+function Content () {
+    return (
+        <div class="content">This is a content</div>
+    )
+}
+
+function Footer () {
+    return (
+        <footer>This is a footer</footer>
+    )
+}
+
+function App ({ title, name }) {
+    return (
+        <div>
+      		<Header/>
+            <Content/>
+            <Footer/>
+      	</div>
+    );
+}
+
+ReactDOM.render(
+    <App title="Hello! This is React.js" name="Arssssshak" />,
+    document.getElementById('editorRes')
+);
+        
